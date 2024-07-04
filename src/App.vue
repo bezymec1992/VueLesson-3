@@ -1,11 +1,18 @@
 <template>
   <AlertVue :type="type"  :text="text"/>
   <BtnGroup />
+
+  <ListGroup>
+    <p>one</p>
+    <p>two</p>
+  </ListGroup>
+
 </template>
 
 <script>
 import AlertVue from './components/AlertVue.vue'
 import BtnGroup from './components/BtnGroup.vue'
+import ListGroup from './components/ListGroup.vue'
 
 export default {
   name: 'App',
@@ -17,7 +24,8 @@ export default {
   },
   components: {
     AlertVue,
-    BtnGroup
+    BtnGroup,
+    ListGroup
   }
 }
 </script>
