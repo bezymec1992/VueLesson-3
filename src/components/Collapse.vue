@@ -5,7 +5,7 @@
         collapse me
       </a>
     </p>
-    <div class="collapse" :class="{ show: isOpen }">
+    <div :class="['collapse', { show: isOpen }]">
       <div class="card card-body">
         {{ text }}
       </div>
@@ -41,5 +41,6 @@
 </script>
 
 <style scoped>
+
 
 </style>

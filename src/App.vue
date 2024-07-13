@@ -9,6 +9,8 @@
 
   <MyCollapse text="це прихований текст" :opened="true"/>
 
+  <MySlider/>
+
 </template>
 
 <script>
@@ -16,20 +18,22 @@ import AlertVue from './components/AlertVue.vue'
 import BtnGroup from './components/BtnGroup.vue'
 import ListGroup from './components/ListGroup.vue'
 import MyCollapse from './components/Collapse.vue'
+import MySlider from './components/MySlider.vue'
 
 export default {
   name: 'App',
   data() {
     return {
       text: 'What is love?asasdas',
-      type: 'warning'
+      type: 'warning',
     }
   },
   components: {
     AlertVue,
     BtnGroup,
     ListGroup,
-    MyCollapse
+    MyCollapse,
+    MySlider
   }
 }
 </script>
