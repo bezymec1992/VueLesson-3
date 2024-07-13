@@ -7,12 +7,15 @@
     <p>two</p>
   </ListGroup>
 
+  <MyCollapse text="це прихований текст" :opened="true"/>
+
 </template>
 
 <script>
 import AlertVue from './components/AlertVue.vue'
 import BtnGroup from './components/BtnGroup.vue'
 import ListGroup from './components/ListGroup.vue'
+import MyCollapse from './components/Collapse.vue'
 
 export default {
   name: 'App',
@@ -25,7 +28,8 @@ export default {
   components: {
     AlertVue,
     BtnGroup,
-    ListGroup
+    ListGroup,
+    MyCollapse
   }
 }
 </script>
