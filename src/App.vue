@@ -1,15 +1,13 @@
 <template>
   <AlertVue :type="type"  :text="text"/>
   <BtnGroup />
-
   <ListGroup>
     <p>one</p>
     <p>two</p>
   </ListGroup>
-
   <MyCollapse text="це прихований текст" :opened="true"/>
 
-  <MySlider/>
+  <MySlider :slides="slides"/>
 
 </template>
 
@@ -26,6 +24,11 @@ export default {
     return {
       text: 'What is love?asasdas',
       type: 'warning',
+      slides: [
+          { src: require('./assets/img/1.jpeg'), alt: 'First slide' },
+          { src: require('./assets/img/2.png'), alt: 'Second slide' },
+          { src: require('./assets/img/3.png'), alt: 'Third slide' }
+        ]
     }
   },
   components: {

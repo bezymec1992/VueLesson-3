@@ -1,7 +1,7 @@
 <template>
    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div v-for="(slide, index) in slides" :key="index" :class="['carousel-item', { 'active': currentIndex === index }]" @click="setActiveSlide(index)">
+        <div v-for="(slide, index) in slides" :key="index" :class="['carousel-item', { 'active': currentIndex === index }]">
           <img :src="slide.src" class="d-block w-100" :alt="slide.alt">
         </div>
       </div>
@@ -17,22 +17,22 @@
 </template>
 
 <script>
+
 export default {
   name: 'MySlider',
+  
+  props: {
+    slides: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
       return {
         currentIndex: 0,
-        slides: [
-          { src: require('@/assets/img/1.jpeg'), alt: 'First slide' },
-          { src: require('@/assets/img/2.png'), alt: 'Second slide' },
-          { src: require('@/assets/img/3.png'), alt: 'Third slide' }
-        ]
       };
     },
     methods: {
-        setActiveSlide(index) {
-          this.currentIndex = index;
-        },
         prevSlide() {
           this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
         },
@@ -41,6 +41,7 @@ export default {
         }
       }
 }
+
 </script>
 
 <style scoped>
